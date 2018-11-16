@@ -1,4 +1,4 @@
 {
-  "presets": ["@babel/preset-react"],
-  "plugins": ["@babel/plugin-proposal-class-properties"]
+  "presets": ["react-app"],
+  "plugins": ["transform-class-properties"]
 }

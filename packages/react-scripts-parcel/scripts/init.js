@@ -156,12 +156,7 @@ module.exports = function(
     command = 'npm';
     args = ['install', '--save', verbose && '--verbose'].filter(e => e);
   }
-  args.push(
-    'react@next',
-    'react-dom@next',
-    '@babel/plugin-proposal-class-properties',
-    '@babel/preset-react'
-  );
+  args.push('react', 'react-dom');
 
   // Install additional template dependencies, if present
   const templateDependenciesPath = path.join(

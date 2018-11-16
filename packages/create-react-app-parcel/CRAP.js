@@ -96,7 +96,7 @@ if (program.info) {
         System: ['OS', 'CPU'],
         Binaries: ['Node', 'npm', 'Yarn'],
         Browsers: ['Chrome', 'Edge', 'Internet Explorer', 'Firefox', 'Safari'],
-        npmPackages: ['react@next', 'react-dom@next', 'react-scripts-parcel'],
+        npmPackages: ['react', 'react-dom', 'react-scripts-parcel'],
         npmGlobalPackages: ['create-react-app-parcel'],
       },
       {
@@ -288,10 +288,7 @@ function run(
   useYarn
 ) {
   const packageToInstall = getInstallPackage(version, originalDirectory);
-  const allDependencies = ['react@next', 'react-dom@next', packageToInstall];
-
-  allDependencies.push('@babel/plugin-proposal-class-properties');
-  allDependencies.push('@babel/preset-react');
+  const allDependencies = ['react', 'react-dom', packageToInstall];
 
   console.log('Installing packages. This might take a couple of minutes.');
   getPackageName(packageToInstall)
